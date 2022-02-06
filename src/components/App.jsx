@@ -3,19 +3,21 @@ import React from "react";
 import Profile from 'components/Profile';
 import Statistics from "./Statistics";
 import FriendList from "./FriendList";
+import TransactionHistory from "./TransactionHistory";
 
 import userJson from '../json/user.json';
 import statData from '../json/data.json';
 import friendsData from '../json/friends.json';
+import transactions from '../json/transactions.json';
 
 export const App = () => {
   return (
     <div
       style={{
         height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // display: 'flex',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         fontSize: 40,
         textTransform: 'uppercase',
         color: '#010101',
@@ -36,7 +38,9 @@ export const App = () => {
         stats={statData}
       />
 
-      <FriendList friends={ friendsData }/>
+      <FriendList friends={friendsData} />
+      
+      <TransactionHistory items={ transactions }/>
     </div>
   );
 };
