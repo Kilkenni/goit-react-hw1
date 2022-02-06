@@ -1,16 +1,31 @@
 import React from "react";
 import propTypes from "prop-types";
+import PleaseJS from 'pleasejs';
+
+import style from './Statistics.module.css';
 
 export default function Statistics({ title, stats }) {
-    return (<section className="statistics">
-        {title && <h2 className="title">{ title }</h2>}
+    // PleaseJS generates an array of colors the size of stats
+    const colorPalette = PleaseJS.make_color( {
+        golden: true,
+        format: "hex",
+        colors_returned: stats.length,
+    } );
 
-        <ul className="stat-list">
-            {stats.map((singleStat) => {
+    return (<section className={style.statistics}>
+        {title && <h2 className={style.title}>{ title }</h2>}
+
+        <ul className={style.stat_list}>
+            {stats.map((singleStat, statIndex) => {
                 return (
-                    <li className="item" key={ singleStat.id }>
-                        <span className="label">{singleStat.label}</span>
-                        <span className="percentage">{ singleStat.percentage }%</span>
+                    <li
+                        className={style.statItem}
+                        key={singleStat.id}
+                        style={{ backgroundColor: colorPalette[statIndex] }}
+                    >
+                        
+                        <span className={style.statItem_label}>{singleStat.label}</span>
+                        <span className={style.statItem_value}>{ singleStat.percentage }%</span>
                     </li>
                 );
             }) }

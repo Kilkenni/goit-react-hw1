@@ -19,7 +19,7 @@ export const App = () => {
         // justifyContent: 'center',
         // alignItems: 'center',
         fontSize: 40,
-        textTransform: 'uppercase',
+        // textTransform: 'uppercase',
         color: '#010101',
       }}
     >
