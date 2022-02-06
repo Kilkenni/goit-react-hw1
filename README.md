@@ -1,5 +1,9 @@
 **Read in other languages: [Русский](README.md), [Polska](README.pl.md).**
 
+# goit-react-hw1
+
+GoIT React HomeWork #1
+
 # React homework template
 
 Этот проект был создан при помощи
