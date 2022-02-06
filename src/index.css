@@ -7,6 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box;
 }
 
 code {
@@ -17,4 +19,10 @@ code {
 ul {
   list-style: none;
   padding: 0;
+
+  box-sizing: border-box;
+}
+
+li {
+  box-sizing: border-box;
 }

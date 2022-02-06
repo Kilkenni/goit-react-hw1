@@ -1,0 +1,37 @@
+.transactionTable {
+  font-size: 18px;
+  line-height: 150%;
+
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  border-color: grey;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.transactionTable thead {
+  text-transform: uppercase;
+
+  background-color: goldenrod;
+}
+
+.transactionTable th {
+  width: 200px;
+}
+
+.transactionTable tr:nth-child(2n) {
+  background-color: khaki;
+}
+
+.transactionTable_type,
+.transactionTable_value,
+.transactionTable_currency {
+  padding-left: 30px;
+}
+
+.transactionTable_type {
+  text-transform: capitalize;
+}
