@@ -1,4 +1,9 @@
 import React from "react";
+import Profile from 'components/Profile';
+import Statistics from "./Statistics";
+
+import userJson from '../json/user.json';
+import statData from '../json/data.json';
 
 export const App = () => {
   return (
@@ -13,7 +18,20 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      React homework template
+      React homework #1: components
+
+      <Profile
+        username = {userJson.username}
+        tag = {userJson.tag}
+        location = {userJson.location}
+        avatar={userJson.avatar}
+        stats={userJson.stats}
+      />
+      
+      <Statistics
+        title="Some useful statistics!"  
+        stats={statData}
+      />
     </div>
   );
 };

@@ -36,5 +36,9 @@ Profile.propTypes = {
     tag: propTypes.string.isRequired,
     location: propTypes.string.isRequired,
     avatar: propTypes.string,
-    stats: propTypes.object.isRequired,
+    stats: propTypes.shape({
+        followers: propTypes.number,
+        views: propTypes.number,
+        likes: propTypes.number,
+    }).isRequired,
 };
